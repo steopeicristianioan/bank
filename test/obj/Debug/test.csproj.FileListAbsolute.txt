@@ -1,0 +1,14 @@
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\test.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\test.pdb
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\C#\Desktop\bankApp\bank\test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\C#\Desktop\bankApp\bank\test\obj\Debug\test.csprojAssemblyReference.cache
+C:\C#\Desktop\bankApp\bank\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\C#\Desktop\bankApp\bank\test\obj\Debug\test.csproj.CopyComplete
+C:\C#\Desktop\bankApp\bank\test\obj\Debug\test.dll
+C:\C#\Desktop\bankApp\bank\test\obj\Debug\test.pdb

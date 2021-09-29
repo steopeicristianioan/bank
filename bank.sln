@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bank", "bank\bank.csproj", "{72DC3CEC-C25F-43DF-8D07-2A43CC58A4DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLibrary.NETFramework", "..\..\..\..\bazeDeDate\DataAccessLibrary.NETFramework\DataAccessLibrary.NETFramework\DataAccessLibrary.NETFramework.csproj", "{DBE7D726-B4F3-4C38-A521-774B86C96FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{30438FDD-46D1-42F3-977E-18DC55A7C041}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{72DC3CEC-C25F-43DF-8D07-2A43CC58A4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72DC3CEC-C25F-43DF-8D07-2A43CC58A4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72DC3CEC-C25F-43DF-8D07-2A43CC58A4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBE7D726-B4F3-4C38-A521-774B86C96FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBE7D726-B4F3-4C38-A521-774B86C96FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBE7D726-B4F3-4C38-A521-774B86C96FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBE7D726-B4F3-4C38-A521-774B86C96FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30438FDD-46D1-42F3-977E-18DC55A7C041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30438FDD-46D1-42F3-977E-18DC55A7C041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30438FDD-46D1-42F3-977E-18DC55A7C041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30438FDD-46D1-42F3-977E-18DC55A7C041}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
