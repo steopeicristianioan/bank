@@ -178,10 +178,6 @@
       <Project>{dbe7d726-b4f3-4c38-a521-774b86c96fbd}</Project>
       <Name>DataAccessLibrary.NETFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\test\test.csproj">
-      <Project>{30438fdd-46d1-42f3-977e-18dc55a7c041}</Project>
-      <Name>test</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
