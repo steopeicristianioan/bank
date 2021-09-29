@@ -21,6 +21,8 @@ namespace bank
 
             PersonRepository repository = new PersonRepository();
             repository.print();
+            Console.WriteLine("");
+            repository.viewSplit();
         }
     }
 }

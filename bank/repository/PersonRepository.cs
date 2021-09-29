@@ -25,10 +25,19 @@ namespace bank.repository
 
             foreach(Person person in all)
             {
+                Console.WriteLine(person.Role_ID);
                 if (person.Role_ID == 1)
                     customers.Add(person as Customer);
                 else employees.Add(person as Employee);
             }
+        }
+        public void viewSplit()
+        {
+            foreach(Customer customer in customers)
+                Console.Write(customer + " ");
+            Console.WriteLine("");
+            foreach(Employee employee in employees)
+                Console.Write(employee + " ");
         }
         public override void print()
         {
