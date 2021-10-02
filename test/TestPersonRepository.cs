@@ -19,7 +19,7 @@ namespace test
             Assert.AreEqual(5, repository.All.Count);
         }
         [TestMethod]
-        public void testAddRemove()
+        public void testAddDelete()
         {
             PersonRepository repository = new PersonRepository();
 
