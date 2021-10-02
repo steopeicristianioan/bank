@@ -10,6 +10,7 @@ namespace bank.repository
     public abstract class Repository<T>
     {
         protected MySqlDataAccess db = new MySqlDataAccess();
+        public MySqlDataAccess DB { get => this.db; set => this.db = value; }
         protected string connection = Useful.getConnectionString();
         public string Connection { get => this.connection; }
         protected List<T> all;
@@ -19,7 +20,7 @@ namespace bank.repository
 
         public abstract void read();
         public abstract void print();
-        public abstract void add();
-        public abstract void delete();
+        public abstract void add(T obj);
+        public abstract void delete(int id);
     }
 }

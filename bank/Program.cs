@@ -1,4 +1,5 @@
-﻿using bank.repository;
+﻿using bank.model;
+using bank.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,10 +20,8 @@ namespace bank
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
-            PersonRepository repository = new PersonRepository();
-            repository.print();
-            Console.WriteLine("");
-            repository.viewSplit();
+            AccountRepository repository = new AccountRepository();
+            Console.WriteLine(repository.getByNumber("3"));
         }
     }
 }

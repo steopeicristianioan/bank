@@ -50,7 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestAccountRepository.cs" />
+    <Compile Include="TestFixed_DepositRepository.cs" />
+    <Compile Include="TestPermissionRepository.cs" />
     <Compile Include="TestPersonRepository.cs" />
+    <Compile Include="TestRoleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

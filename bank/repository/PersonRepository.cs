@@ -19,47 +19,41 @@ namespace bank.repository
 
         public override void read()
         {
+            all = new List<Person>();
+            customers = new List<Customer>();
+            employees = new List<Employee>();
+
             string sql = "select * from user";
             all = db.LoadData<Person, dynamic>(sql, new { }, connection);
             last_id = all[all.Count - 1].ID;
+            //Console.WriteLine(last_id);
 
-
-            for (int i = 0; i < all.Count; i++)
-            {
-                if (all[i].Role_ID == 1)
-                {
-                    //Console.WriteLine(1);
-                    Customer customer = all[i] as Customer;
-                    //Console.WriteLine(all[i]);
-                    customers.Add(customer);
-                }
-                else employees.Add(all[i] as Employee);
-            }
             foreach (Person person in all)
             {
-                Console.WriteLine(person.Role_ID);
                 if (person.Role_ID == 1)
                 {
                     Customer customer = new Customer(person.ID, person.Role_ID, person.Name,
-                        person.Email, person.Created_At, person.Adress);
+                        person.Email, person.Created_At, person.Address);
                     customers.Add(customer);
                 }
                 else
                 {
-                    employees.Add(person as Employee);
+                    Employee employee = new Employee(person.ID, person.Role_ID, person.Name,
+                        person.Email, person.Created_At, person.Address);
+                    employees.Add(employee);
                 }
             }
         }
         public void viewSplit()
         {
-            foreach(Customer customer in customers)
+            foreach (Customer customer in customers)
             {
-                Console.Write(customer + " ");
+                Console.WriteLine(customer + " ");
             }
             Console.WriteLine("");
-            foreach(Employee employee in employees)
+            foreach (Employee employee in employees)
             {
-                Console.Write(employee + " ");
+                Console.WriteLine(employee + " ");
             }
         }
         public override void print()
@@ -67,13 +61,35 @@ namespace bank.repository
             foreach (Person person in all)
                 Console.WriteLine(person);
         }
-        public override void add()
+
+        public override void add(Person person)
         {
-            //throw new NotImplementedException();
+            string sql = "insert into user(role_id, name, email, address, created_at) values " +
+                "(@r, @n, @e, @a, @c)";
+            db.SaveData(sql, new
+            {
+                r = person.Role_ID,
+                n = person.Name,
+                e = person.Email,
+                a = person.Address,
+                c = person.Created_At
+            }, connection);
+            read();
         }
-        public override void delete()
+        public override void delete(int id)
         {
-            //throw new NotImplementedException();
+            Console.WriteLine(Last_ID);
+            string sql = "delete from user where id = @i";
+            db.SaveData(sql, new { i = id }, connection);
+            read();
+        }
+        public Person getByName(string name)
+        {
+            string sql = "select * from user where name = @n limit 1";
+            List<Person> people = db.LoadData<Person, dynamic>(sql, new { n = name }, connection);
+            if (people.Count == 0)
+                return null;
+            return people[0];
         }
     }
 }

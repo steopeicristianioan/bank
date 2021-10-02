@@ -22,7 +22,7 @@ namespace bank.model
         public string Name { get => this.name; set => this.name = value; }
         public string Email { get => this.email; set => this.email = value; }
         public DateTime Created_At { get => this.created_at; set => this.created_at = value; }
-        public string Adress { get => this.address; set => this.address = value; }
+        public string Address { get => this.address; set => this.address = value; }
         #endregion
 
         public Person(int id, int role_id, string name, string email, 
