@@ -57,10 +57,11 @@ C:\C#\Desktop\bankApp\bank\bank\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\C#\Desktop\bankApp\bank\bank\bin\Debug\K4os.Compression.LZ4.xml
 C:\C#\Desktop\bankApp\bank\bank\bin\Debug\K4os.Hash.xxHash.xml
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.csprojAssemblyReference.cache
-C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.Form1.resources
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.Properties.Resources.resources
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.csproj.GenerateResource.cache
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.csproj.CoreCompileInputs.cache
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.csproj.CopyComplete
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.exe
 C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.pdb
+C:\C#\Desktop\bankApp\bank\bank\bin\Debug\FontAwesome.Sharp.dll
+C:\C#\Desktop\bankApp\bank\bank\obj\Debug\bank.MainForm.resources

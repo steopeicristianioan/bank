@@ -62,5 +62,42 @@ namespace bank.repository
                 return null;
             return deposits[0];
         }
+
+        private double generateInterest_Rate(double start, double finish)
+        {
+            Random random = new Random();
+            return random.NextDouble() * (finish - start) + start;
+        }
+        public Fixed_DepositOffer generateOffer(double percent, string ammount)
+        {
+            double balance = double.Parse(ammount);
+            double interest_rate = 0.0;
+            if(percent >= 2 && percent <= 10)
+            {
+                if (balance < 100000)
+                    interest_rate = generateInterest_Rate(0.05, 0.075);
+                else if (balance < 500000)
+                    interest_rate = generateInterest_Rate(0.25, 0.05);
+                else interest_rate = generateInterest_Rate(0.01, 0.025);
+            }
+            else if(percent > 10 && percent <= 20)
+            {
+                if (balance < 100000)
+                    interest_rate = generateInterest_Rate(0.55, 0.085);
+                else if (balance < 500000)
+                    interest_rate = generateInterest_Rate(0.03, 0.055);
+                else interest_rate = generateInterest_Rate(0.02, 0.03);
+            }
+            else
+            {
+                if (balance < 100000)
+                    interest_rate = generateInterest_Rate(0.07, 0.095);
+                else if (balance < 500000)
+                    interest_rate = generateInterest_Rate(0.045, 0.07);
+                else interest_rate = generateInterest_Rate(0.02, 0.035);
+            }
+
+            return new Fixed_DepositOffer(percent, balance, interest_rate);
+        }
     }
 }

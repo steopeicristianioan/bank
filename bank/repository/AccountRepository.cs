@@ -57,5 +57,15 @@ namespace bank.repository
                 return null;
             return accounts[0];
         }
+
+        public Account getByCustomer(int cusotmer_id)
+        {
+            string sql = "select * from account where type = @v and customer_id = @i limit 1";
+            List<Account> accounts = db.LoadData<Account, dynamic>(sql, new { v = "current", i = cusotmer_id },
+                connection);
+            if (accounts.Count == 0)
+                return null;
+            return accounts[0];
+        }
     }
 }

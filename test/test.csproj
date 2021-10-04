@@ -50,13 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestAccountRepository.cs" />
-    <Compile Include="TestFixed_DepositRepository.cs" />
-    <Compile Include="TestPermissionRepository.cs" />
-    <Compile Include="TestPersonRepository.cs" />
-    <Compile Include="TestRoleRepository.cs" />
+    <Compile Include="repository\TestAccountRepository.cs" />
+    <Compile Include="repository\TestFixed_DepositRepository.cs" />
+    <Compile Include="repository\TestPermissionRepository.cs" />
+    <Compile Include="repository\TestPersonRepository.cs" />
+    <Compile Include="repository\TestRoleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

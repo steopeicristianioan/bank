@@ -35,5 +35,13 @@ namespace test
             Assert.AreEqual(null, repository.getByNumber("n1"));
             Assert.AreEqual(null, repository.getByNumber("n2"));
         }
+        [TestMethod]
+        public void testGetByCustomer()
+        {
+            AccountRepository repository = new AccountRepository();
+
+            Assert.AreEqual("3", repository.getByCustomer(123).Number);
+            Assert.AreEqual(null, repository.getByCustomer(104));
+        }
     }
 }

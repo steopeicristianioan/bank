@@ -1,4 +1,5 @@
-﻿using bank.model;
+﻿using bank.control;
+using bank.model;
 using bank.repository;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,11 @@ namespace bank
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
 
-            AccountRepository repository = new AccountRepository();
-            Console.WriteLine(repository.getByNumber("3"));
+            //AccountControl control = new AccountControl(new AccountRepository());
         }
     }
 }
