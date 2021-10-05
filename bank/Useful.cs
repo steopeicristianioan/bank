@@ -64,5 +64,21 @@ namespace bank
             label.BackColor = Color.Transparent;
             label.ForeColor = ColorTranslator.FromHtml(foreColor);
         }
+        public static void placePicBoxInParent(IconPictureBox box, Control parent, Size size,
+            Point location, IconChar iconChar, string iconColor)
+        {
+            box.Parent = parent;
+            box.Size = size;
+            box.Location = location;
+            box.IconChar = iconChar;
+            box.IconColor = ColorTranslator.FromHtml(iconColor);
+        }
+        public static void placeControlInParent(Control control, Control parent, Size size, 
+            Point location)
+        {
+            control.Parent = parent;
+            control.Size = size;
+            control.Location = location;
+        }
     }
 }

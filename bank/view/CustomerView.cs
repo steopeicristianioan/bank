@@ -34,14 +34,15 @@ namespace bank.view
 
         public CustomerView(int id, Control parent) : base(id, parent)
         {
-            control = new CustomerViewControl(this);
-
             setHeader();
             setAside();
             setMain();
 
+            control = new CustomerViewControl(this);
+
             loadAside();
             loadHeader();
+
         }
 
         protected override void setHeader()
@@ -82,6 +83,7 @@ namespace bank.view
                 "Home", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
             home.Click += new EventHandler(control.moveCurrentPanel);
+            home.Click += new EventHandler(control.openHomeView);
         }
         private void loadMyCurrent()
         {
@@ -91,6 +93,7 @@ namespace bank.view
                 "My account", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
             myCurrentAccount.Click += new EventHandler(control.moveCurrentPanel);
+            myCurrentAccount.Click += new EventHandler(control.openMyAccountView);
         }
         private void loadMakeTransfer()
         {

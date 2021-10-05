@@ -91,5 +91,13 @@ namespace bank.repository
                 return null;
             return people[0];
         }
+        public Person getById(int id)
+        {
+            string sql = "select * from user where id = @i limit 1";
+            List<Person> people = db.LoadData<Person, dynamic>(sql, new { i = id }, connection);
+            if (people.Count == 0)
+                return null;
+            return people[0];
+        }
     }
 }

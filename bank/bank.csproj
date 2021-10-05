@@ -161,7 +161,16 @@
     <Compile Include="view\CustomerView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="view\HomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="view\IView.cs" />
+    <Compile Include="view\MyAccountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\PersonCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="view\View.cs">
       <SubType>Form</SubType>
     </Compile>
