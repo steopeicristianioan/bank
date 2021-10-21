@@ -28,7 +28,7 @@ namespace bank
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            openChild(new CustomerView(123, this));
+            openChild(new CustomerView(172, this));
         }
 
         private void openChild(Form child)

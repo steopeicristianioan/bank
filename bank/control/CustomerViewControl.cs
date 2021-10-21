@@ -17,6 +17,7 @@ namespace bank.control
         private CustomerView view;
         private PersonRepository personRepository;
         private AccountRepository accountRepository;
+        private Fixed_DepositRepository depositRepository;
 
         public CustomerView View { get => this.view; set => this.view = value; }
 
@@ -25,6 +26,7 @@ namespace bank.control
             this.view = view;
             this.personRepository = new PersonRepository();
             this.accountRepository = new AccountRepository();
+            this.depositRepository = new Fixed_DepositRepository();
 
             openChild(new HomeView(view.ID, view.Main, personRepository), view.Main);
         }
@@ -49,6 +51,15 @@ namespace bank.control
         {
             Account account = accountRepository.getByCustomer(view.ID);
             openChild(new MyAccountView(view.ID, view.Main, account), view.Main);
+        }
+        public void openTransferView(object sender, EventArgs e)
+        {
+            openChild(new TransferView(view.ID, view.Main, accountRepository), view.Main);
+        }
+        public void openMySavingView(object sender, EventArgs e)
+        {
+            openChild(new MySavingView(view.ID, view.Main, depositRepository.getByCustomer(view.ID))
+                , view.Main);
         }
     }
 }

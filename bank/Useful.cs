@@ -43,6 +43,7 @@ namespace bank
             button.Font = font;
             button.ImageAlign = button.TextAlign = alignment;
             button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.BorderColor = button.BackColor;
         }
         public static void placePanelInParent(Panel panel, Control parent, Size size, 
             Point location, string backColor)
@@ -79,6 +80,17 @@ namespace bank
             control.Parent = parent;
             control.Size = size;
             control.Location = location;
+        }
+        public static void placeTextBoxInParent(TextBox textBox, Control parent, int width,
+            Point location, Font font, string foreColor, BorderStyle borderStyle, string backColor)
+        {
+            textBox.Parent = parent;
+            textBox.Width = width;
+            textBox.Location = location;
+            textBox.Font = font;
+            textBox.ForeColor = ColorTranslator.FromHtml(foreColor);
+            textBox.BorderStyle = borderStyle;
+            textBox.BackColor = ColorTranslator.FromHtml(backColor);
         }
     }
 }

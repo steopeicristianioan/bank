@@ -41,5 +41,6 @@ namespace bank.view
         protected virtual void setHeader() { }
         protected virtual void setMain() { }
         protected virtual void setAside() { }
+
     }
 }

@@ -46,10 +46,13 @@ namespace bank.view
 
         private void loadMain()
         {
-            loadNumber();
-            loadBalance();
-            loadCreated();
-            number.IconColor = balance.IconColor = created.IconColor = ColorTranslator.FromHtml("#39603D");
+            if(account != null)
+            {
+                loadNumber();
+                loadBalance();
+                loadCreated();
+                number.IconColor = balance.IconColor = created.IconColor = ColorTranslator.FromHtml("#39603D");
+            }
         }
         private void loadNumber()
         {

@@ -67,5 +67,25 @@ namespace bank.repository
                 return null;
             return accounts[0];
         }
+        public void makeTransfer(Account from, Account to, string sum)
+        {
+            double diff = double.Parse(sum);
+            double fromSum = double.Parse(from.Balance);
+            double toSum = double.Parse(to.Balance);
+
+            fromSum -= diff;
+            toSum += diff;
+
+            from.Balance = fromSum.ToString();
+            to.Balance = toSum.ToString();
+
+            string sql1 = "update account set balance = @from where id = @ifrom;";
+            string sql2 = "update account set balance = @to where id = @ito";
+
+            db.SaveData(sql1, new { from = from.Balance, ifrom = from.ID }, connection);
+            db.SaveData(sql2, new { to = to.Balance, ito = to.ID }, connection);
+
+            read();
+        }
     }
 }

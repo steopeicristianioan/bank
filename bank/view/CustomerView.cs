@@ -82,6 +82,7 @@ namespace bank.view
                 new Point(50, 150), IconChar.Coins, "#3C403D", "#0000ffff",
                 "Home", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
+
             home.Click += new EventHandler(control.moveCurrentPanel);
             home.Click += new EventHandler(control.openHomeView);
         }
@@ -92,6 +93,7 @@ namespace bank.view
                 new Point(50, 240), IconChar.MoneyBillAlt,"#3C403D", "#0000ffff", 
                 "My account", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
+
             myCurrentAccount.Click += new EventHandler(control.moveCurrentPanel);
             myCurrentAccount.Click += new EventHandler(control.openMyAccountView);
         }
@@ -102,7 +104,9 @@ namespace bank.view
                 new Point(50, 330), IconChar.ExchangeAlt, "#3C403D", "#0000ffff",
                 "Make Transfer", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
+
             makeTransfer.Click += new EventHandler(control.moveCurrentPanel);
+            makeTransfer.Click += new EventHandler(control.openTransferView);
         }
         private void loadMyFixedDeposit()
         {
@@ -111,7 +115,9 @@ namespace bank.view
                 new Point(50, 420), IconChar.PiggyBank, "#3C403D", "#0000ffff",
                 "My savings", new Font("Segoe UI", 10, FontStyle.Regular),
                 ContentAlignment.MiddleCenter);
+
             myFixedDeposit.Click += new EventHandler(control.moveCurrentPanel);
+            myFixedDeposit.Click += new EventHandler(control.openMySavingView);
         }
         
 

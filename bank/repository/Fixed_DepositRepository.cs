@@ -9,6 +9,7 @@ namespace bank.repository
 {
     public class Fixed_DepositRepository : Repository<Fixed_Deposit>
     {
+        public string Last_Number;
         public Fixed_DepositRepository()
         {
             read();
@@ -21,6 +22,7 @@ namespace bank.repository
             string sql = "select * from fixed_deposit";
             all = db.LoadData<Fixed_Deposit, dynamic>(sql, new { }, connection);
             last_id = all[all.Count - 1].ID;
+            Last_Number = all[all.Count - 1].Number;
         }
         public override void print()
         {
@@ -83,7 +85,7 @@ namespace bank.repository
             else if(percent > 10 && percent <= 20)
             {
                 if (balance < 100000)
-                    interest_rate = generateInterest_Rate(0.55, 0.085);
+                    interest_rate = generateInterest_Rate(0.055, 0.085);
                 else if (balance < 500000)
                     interest_rate = generateInterest_Rate(0.03, 0.055);
                 else interest_rate = generateInterest_Rate(0.02, 0.03);
@@ -98,6 +100,15 @@ namespace bank.repository
             }
 
             return new Fixed_DepositOffer(percent, balance, interest_rate);
+        }
+        public Fixed_Deposit getByCustomer(int id)
+        {
+            string sql = "select * from fixed_deposit where customer_id = @i limit 1";
+            List<Fixed_Deposit> deposits = db.LoadData<Fixed_Deposit, dynamic>(sql, new { i = id },
+                connection);
+            if (deposits.Count == 0)
+                return null;
+            return deposits[0];
         }
     }
 }
