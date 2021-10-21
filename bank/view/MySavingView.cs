@@ -66,7 +66,9 @@ namespace bank.view
             {
                 offer = new OfferView(this.ID, this.main);
                 offer.Show();
-                
+                MessageBox.Show("NU STIU CUM SA FAC CA SA MEARGA CODU DE JOS NUMAI DUPA " +
+                    "CE SE INCHIDE FORMA OFFER PENTRU CA NU MERGE CU SHOWDIALOG() CA NU E " +
+                    "TOP LEVEL!!!!!!!!!!!!!!!");
                 repository = new Fixed_DepositRepository();
                 deposit = repository.getByCustomer(this.ID);
                 if (deposit != null)
